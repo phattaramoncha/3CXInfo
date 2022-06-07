@@ -53,7 +53,7 @@
                     if (response) {
                         var json_d = response.d;
                         //console.log(json_d);
-                         
+
                         var ps_json = JSON.parse(json_d);
                         //console.log(ps_json);
 
@@ -84,7 +84,7 @@
                     }
                 }
             });
-        } 
+        }
 
         jQuery(document).ready(function () {
             $("#form1").on("submit", function (e) {
@@ -95,6 +95,13 @@
         });
     </script>
 
+
+    <style>
+        body {
+            background-image: url('assets/media/bg/bg-3.jpg');
+        }
+    </style>
+
 </head>
 <!--begin::Body-->
 <body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled sidebar-enabled page-loading">
@@ -103,7 +110,7 @@
         <div class="d-flex flex-column flex-root">
             <!--begin::Login-->
             <div class="login login-4 login-signin-on d-flex flex-row-fluid" id="kt_login">
-                <div class="d-flex flex-center flex-row-fluid bgi-size-cover bgi-position-top bgi-no-repeat" style="background-image: url('assets/media/bg/bg-3.jpg');">
+                <div class="d-flex flex-center flex-row-fluid bgi-size-cover bgi-position-top bgi-no-repeat" ><%--style="background-image: url('assets/media/bg/bg-3.jpg');"--%>
                     <div class="login-form text-center p-7 position-relative overflow-hidden">
                         <!--begin::Login Header-->
                         <div class="d-flex flex-center mb-15">
@@ -120,13 +127,13 @@
                             </div>
                             <div class="form" id="kt_login_signin_form">
                                 <div class="form-group mb-5">
-                                    <input id="txtUserName" class="form-control h-auto form-control-solid py-4 px-8" type="text" placeholder="Email" name="username" autocomplete="off" />
+                                    <input id="txtUserName" class="form-control h-auto form-control-solid py-4 px-8" type="text" placeholder="Username" name="username" autocomplete="off" />
                                 </div>
                                 <div class="form-group mb-5">
                                     <input id="txtPassword" class="form-control h-auto form-control-solid py-4 px-8" type="password" placeholder="Password" name="password" />
                                 </div>
 
-                                <input id="btnLogin" type="submit" class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4" value="เข้าสู่ระบบ"  /><%--onclick="getLogin()"--%>
+                                <input id="btnLogin" type="submit" class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4" value="เข้าสู่ระบบ" /><%--onclick="getLogin()"--%>
                             </div>
                             <div id="dvNoPermission"></div>
                         </div>

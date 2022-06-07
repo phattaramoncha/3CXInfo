@@ -37,6 +37,12 @@
 
     </script>
 
+     <style>
+        body {
+            background-image: url('assets/media/bg/bg-3.jpg');
+        }
+    </style>
+
 </head>
 <body>
 

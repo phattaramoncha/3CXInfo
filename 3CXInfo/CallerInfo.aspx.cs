@@ -12,17 +12,12 @@ namespace _3CXInfo
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
-            { 
+            {
             }
         }
 
-        protected void btnSearch_Click(object sender, EventArgs e)
-        {
-
-        }
-
         [WebMethod]
-        public static string getCallerInfo(string numberPhone, string dateStart, string dateEnd, bool type)
+        public static string getCallerInfo(string numberPhone, string dateStart, string dateEnd, bool type, bool toDN)
         {
             //DateTime dtSrt = DateTime.ParseExact(dateStart, "dd/MM/yyyy", CultureInfo.InvariantCulture);
             //DateTime dtEnd = DateTime.ParseExact(dateEnd, "dd/MM/yyyy", CultureInfo.InvariantCulture);
@@ -32,7 +27,7 @@ namespace _3CXInfo
             //SEARCH
             if (type)
             {
-                result = info.getCallerInfo(numberPhone, dateStart, dateEnd);
+                result = info.getCallerInfo(numberPhone, dateStart, dateEnd, toDN);
                 return result;
             }
             else
@@ -40,6 +35,11 @@ namespace _3CXInfo
                 result = info.getCallerInfoTODAY();
                 return result;
             }
+        }
+        [WebMethod]
+        public static string ExportReport(string numberPhone, string dateStart, string dateEnd, bool type, bool toDN)
+        {
+            return "CreateRpt.aspx?in_numbp=" + numberPhone + "&in_datest=" + dateStart + "&in_dateed=" + dateEnd + "&in_todn=" + toDN + "";
         }
 
 
